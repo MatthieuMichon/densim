@@ -11,3 +11,5 @@ script:
   - python tests/always_ok.py
   - python tests/check_tests.py
 
+notifications:
+  email: false
