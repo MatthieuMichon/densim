@@ -2,7 +2,7 @@ import json
 
 def check_test_json():
     try:
-        json_data = json.load(open("data/mission-kyoto-4444.json"))
+        json_data = json.load(open("tests/data/mission-kyoto-4444.json"))
     except Exception:
         print("Fail!")
         return False
