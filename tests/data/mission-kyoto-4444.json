@@ -1,0 +1,29 @@
+{
+	"object": "Mission",
+	"version": 1,
+	"data": {
+		"number": 4444,
+		"direction": "HK-44",
+		"days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+		"events":[
+			{"time":"13:10",
+			"station":"HK-30",
+			"action":"start"},
+			{"time":"13:20",
+			"station":"HK-40",
+			"action":"stop"},
+			{"time":"13:22",
+			"station":"HK-40",
+			"action":"start"},
+			{"time":"13:24",
+			"station":"HK-41",
+			"action":"stop"},
+			{"time":"13:26",
+			"station":"HK-42",
+			"action":"stop"},
+			{"time":"13:26",
+			"station":"HK-44",
+			"action":"stop"}
+		]
+	}
+}
