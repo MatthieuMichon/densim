@@ -8,8 +8,7 @@ python:
 
 # command to run tests, e.g. python setup.py test
 script:
-  - python tests/always_ok.py
-  - python tests/check_tests.py
+  - python tests.py
 
 notifications:
   email: false
