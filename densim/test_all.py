@@ -1,9 +1,9 @@
 import sys
-from .test_service import test_add_service_from_file
+from .test_service import run_all_tests
 
 def main():
     test_filename = "data/services/service-4444.json"
-    if test_add_service_from_file(test_filename) != True:
+    if run_all_tests(test_filename) != True:
         return False
     return True
 

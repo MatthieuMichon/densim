@@ -2,7 +2,7 @@
 	"object": "Service",
 	"version": 1,
 	"data": {
-		"number": 4444,
+		"code": 4444,
 		"direction": "HK-44",
 		"days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
 		"events":[
