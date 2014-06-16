@@ -8,7 +8,9 @@ def main():
     if json_ok != 0:
         raise Exception
     if densim.test_all.main() != True:
+        print("Test failed.")
         return -1
+    print("Test successful.")
     return 0
 
 if __name__ == '__main__':

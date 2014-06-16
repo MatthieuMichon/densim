@@ -21,5 +21,6 @@ def test_display_all_services(fp):
 def run_all_tests(fp):
     if test_add_service_from_file(fp) == False: return False
     if test_display_all_services(fp) == False: return False
+    return True
 
 # vim: set et sts=4:
