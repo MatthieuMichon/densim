@@ -50,5 +50,16 @@ class Service:
         for days in entry["days"]:
             print(days + " ", end="")
         print("")
-        #pprint(entry)
+        print(" - Events: ")
+        for event in entry["events"]:
+            self.display_event(event)
+        print("")
+
+	# TODO: Move in new file event.py
+    def display_event(self, event):
+        """Display a given event"""
+        time = event['time']
+        station = event['station']
+        action = event['action']
+        print("  - " + time + ": " + station + " | " + action)
 
