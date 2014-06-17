@@ -23,4 +23,3 @@ def run_all_tests(fp):
     if test_display_all_services(fp) == False: return False
     return True
 
-# vim: set et sts=4:

@@ -34,4 +34,3 @@ if __name__ == '__main__':
         exit(0)
     exit(-1)
 
-# vim: set et sw=4 sts=4:

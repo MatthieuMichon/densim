@@ -52,4 +52,3 @@ class Service:
         print("")
         #pprint(entry)
 
-# vim: set et sts=4:
