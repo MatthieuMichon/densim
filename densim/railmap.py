@@ -1,20 +1,38 @@
+import os
+import glob
 import json
 from pprint import pprint
 
-class Event:
-    """Event class"""
+class Station:
+    """Station class"""
 
-    def __init__(self, time, station, action):
-        if action not in self.supported_actions:
-            raise ValueError("unknown action: " + action)
-        self.time = time
-        self.station = station
-        self.action = action
+class Line:
+    """Line class"""
 
-    def display(self):
-        print("  - " + self.time + ": " + self.station + " | " + self.action)
+class Railmap:
+    """Railmap class"""
 
-    supported_actions = ["start", "stop", "arrival", "departure"]
+    def __init__(self, name = "default"):
+        self.name = name
+
+    def import_file(self, filename):
+        try:
+            json_data = json.loads(open(filename).read())
+            if json_data["object"] not in self.railmap_objects:
+                # not a relavent JSON file
+                return
+        except Exception:
+            print("JSON format error")
+
+    def import_folder(self, fp):
+        for filename in glob.glob(os.path.join(fp, '*.json')):
+            self.import_file(filename)
+
+    railmap_objects = {"Service": Line, "Station": Station}
+
+if __name__ == '__main__':
+    railmap = Railmap("Hankyu-2014")
+    railmap.import_folder("data/services")
 
 class Service:
     """Service class"""
